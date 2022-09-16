@@ -1,0 +1,134 @@
+.backg{
+    background: #091d3b;
+}
+
+.title{
+    font-size: 50px;
+    color: white;
+    font-weight: 800;
+    text-align: left;
+}
+.slogan{
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    text-align: left;
+}
+.genre{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 500;
+}
+/* .moviecard{
+    width: 24%;
+    height: 400px;
+}
+.row-card{  
+    border-radius: 5px;
+    width: 24%;
+    padding: 0;
+    height: 200px;
+    transition-duration: 0.4s;
+    transition-delay: 0.3s;
+    background-size:cover ;
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+
+
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+.wrap{
+    width: 100%;
+    height: 200px;
+    margin: 0;  
+}
+
+
+.card-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    font-size: 12px;   
+}
+.row-card:hover .card-gradient{   
+  display: block;
+  visibility: visible;
+  opacity: 1;
+      
+}
+.row-card:hover{
+    transform: scale(1.15);
+}
+ */
+ .movie-list{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    border: #105FD3;
+    color: aliceblue;
+}
+
+
+.card-container{
+    display: flex;
+    height: 200px;
+    width: 100%;
+    overflow: scroll;
+    align-items: center;   
+    border-radius: 10px;
+    border: white; 
+    scroll-behavior: smooth;
+}
+
+.left-btn{
+    position: absolute;
+    z-index: 3;
+}
+.right-btn{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+.right-btn:hover{
+    transform: scale(1.3);
+}
+.left-btn:hover{
+    transform: scale(1.3);
+}
+.movie-container{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+.movie{
+    flex: 0 0 auto;
+    width: 24%;
+    height: 200px;
+    text-align: center;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.movie img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.movie p{
+    text-transform: capitalize;
+    height: 20px;
+    overflow: hidden;
+}
