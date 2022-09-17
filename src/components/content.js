@@ -23,8 +23,6 @@ const Content = () => {
     const [getid, setGetid] = useState(null);
     let Newarray = [];
 
-
-    
     useEffect(() => {
         axios.get(`${genres_list_http}api_key=${api_key}`)
         .then(res=>{
@@ -33,7 +31,21 @@ const Content = () => {
     }, [])
 
     console.log(genre);
-    const cards = (id) => {
+    const  cards = async (id) => {
+        const newdata = await axios.get(`${movie_genres_http}`,{
+            params: {
+                api_key: api_key,
+                with_genres: id,
+                page: Math.floor(Math.random() * 3) + 1
+            }
+            }).then(res=>{
+                console.log(res.data.results);
+                const response = res.data.results;
+        })
+        return newdata;
+    }
+    //get movies from genre
+    const getMovies = (id) => {
         axios.get(`${movie_genres_http}`,{
             params: {
                 api_key: api_key,
@@ -42,10 +54,12 @@ const Content = () => {
             }
             }).then(res=>{
                 console.log(res.data.results);
-                const response=res.data.results;
-                Newarray=response;
+                const response = res.data.results;
+                setMovielist(response);
         })
     }
+    
+
  
 
     // useEffect(() => {
@@ -113,7 +127,7 @@ const Content = () => {
         </Row>
         {genre.map(item=>{
             const {id,name} = item;
-            cards(id);
+            let MovieArray = cards(id);
             return(
                 <Row key={id}>
                     <p className='genre ms-3 mb-3 mt-5'>
@@ -122,7 +136,7 @@ const Content = () => {
                     <div className='movie-container'>
                         <GrNext onClick={()=>{scroll(1700)}} className="right-btn"/>
                         <GrPrevious onClick={()=>{scroll(-1700)}} className="left-btn"/>
-                        {movielist.map(films=>{
+                        {MovieArray.map(films=>{
                             if(films.backdrop_path == null){
                                 films.backdrop_path = films.poster_path;
                                 if(films.backdrop_path == null){
