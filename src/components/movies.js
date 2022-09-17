@@ -23,20 +23,12 @@ const Movies = () => {
         })
     }, []);
 
-    // const fetchMoviesListByGenres = (id, genres) => {
-    //     axios.get(`${movie_genres_http}api_key=${api_key}&with_genres=${id}&page=${Math.floor(Math.random() * 3) + 1}`)
-    //     .then(res=>{
-    //         console.log(res.data.results);
-    //         makeCategoryElement(`${genres}_movies`, res.data.results);
-    //     }).catch(err =>  console.log(err));
-    // }
-
    return(
         <>
         {genres.map((item, idx) => {
             return (
-                <Row key={idx}>
-                    <p className='genre ms-3 mb-3 mt-5'>
+                <Row key={idx} className="ms-1">
+                    <p className='genre ms-2 mb-3 mt-5'>
                         {item.name} Movies
                     </p>
                     <div className='movie-container'>
