@@ -10,24 +10,25 @@ import { api_key,
  import axios from 'axios';
 import { Row } from 'react-bootstrap';
 import Cards from './cards';
+import genres from '../data/genres';
 
 
 const Movies = () => {
-    const [genres, setGenres] = useState([]);
+    // const [genres, setGenres] = useState([]);
 
-    useEffect(() => {
-        axios.get(`${genres_list_http}api_key=${api_key}`)
-        .then(res=>{
-            console.log(res.data.genres);
-            setGenres(res.data.genres);
-        })
-    }, []);
+    // useEffect(() => {
+    //     axios.get(`${genres_list_http}api_key=${api_key}`)
+    //     .then(res=>{
+    //         console.log(res.data.genres);
+    //         setGenres(res.data.genres);
+    //     })
+    // }, []);
 
    return(
         <>
         {genres.map((item, idx) => {
             return (
-                <Row key={idx} className="ms-1">
+                <Row key={idx} className="ms-1 pb-3">
                     <p className='genre ms-2 mb-3 mt-5'>
                         {item.name} Movies
                     </p>

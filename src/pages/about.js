@@ -8,6 +8,7 @@ import Moviedetail from '../components/moviedetail';
 import Trailer from '../components/trailer';
 import { Container, Row } from 'react-bootstrap';
 import Recommendation from '../components/recommendation';
+import Footer from '../components/footer';
 
 
 const Aboutpage = () => {
@@ -24,10 +25,10 @@ const Aboutpage = () => {
    
 
   return (
-    <div>
-        <NavigationBar/>
         <Container className='m-0 p-0 backg' fluid>
+            <Row>
                 <Moviedetail movie={movieInfo}/>
+            </Row>
             <Row>
                 <Trailer movie={movieInfo}/>
             </Row>
@@ -35,7 +36,6 @@ const Aboutpage = () => {
                 <Recommendation movie={movieInfo}/>
             </Row>
         </Container>
-    </div>
   )
 }
 

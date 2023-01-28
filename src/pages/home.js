@@ -1,10 +1,11 @@
 import axios from 'axios'
 import React from 'react'
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Carousel, Container, Row } from 'react-bootstrap'
 import Movies from '../components/movies'
 import NavigationBar from '../components/navbar'
 import { useNavigate } from "react-router-dom";
+import Footer from '../components/footer';
 
 const Homepage = () => {
     let Navigate  = useNavigate();
@@ -18,10 +19,9 @@ const Homepage = () => {
     }, []);
 
   return (
-    <div>
-        <NavigationBar  />
-        <Container className='backg w-100 h-100 mb-0' fluid>
-            <Row>
+    <Container fluid className='px-0 mx-0'>
+        <Row className='backg h-100 mb-0 mx-0 px-0' fluid>
+            <Row className='px-0 mx-0'>
                 <Carousel className='carousel'>
                     {movies.map((item, idx) => {
                         return (
@@ -41,8 +41,8 @@ const Homepage = () => {
                 </Carousel>
             </Row>
             <Movies />
-        </Container>
-    </div>
+        </Row>
+    </Container>
   )
 }
 

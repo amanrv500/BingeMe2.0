@@ -8,8 +8,8 @@ import { useNavigate } from 'react-router-dom'
 const Cards = (props) => {
     let Navigate  = useNavigate();
     const [movies, setMovies] = useState([]);
-    const [page, setPage] = useState(1);
-    const [totalPages, setTotalPages] = useState(0);
+    // const [page, setPage] = useState(1);
+    // const [totalPages, setTotalPages] = useState(0);
 
     const fetchMoviesListByGenres = (id, genres) => {
         axios.get(`${movie_genres_http}api_key=${api_key}&with_genres=${id}&page=${Math.floor(Math.random() * 3) + 1}`)
