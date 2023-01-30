@@ -3,7 +3,6 @@ import { original_img_url } from '../api/api';
 
 const Moviedetail = (props) => {
     const movieinfo = props.movie;
-	console.log(props.movie);
 	const title = movieinfo.title;
 	if(movieinfo.backdrop_path == null){
         movieinfo.backdrop_path = movieinfo.poster_path;

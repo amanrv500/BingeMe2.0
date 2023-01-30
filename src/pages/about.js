@@ -9,6 +9,7 @@ import Trailer from '../components/trailer';
 import { Col, Container, Row } from 'react-bootstrap';
 import Recommendation from '../components/recommendation';
 import Footer from '../components/footer';
+import Streaming from '../components/streaming';
 
 
 const Aboutpage = () => {
@@ -21,8 +22,6 @@ const Aboutpage = () => {
         })
         window.scrollTo(0, 0);
     },[movieId])
-   
-
     return (
         <Container className='backg' fluid>
             <Row>
@@ -30,6 +29,7 @@ const Aboutpage = () => {
                     <Moviedetail movie={movieInfo}/>
                 </Col>
             </Row>
+            <Streaming />
             <Row>
                 <Col>
                     <Trailer movie={movieInfo}/>
