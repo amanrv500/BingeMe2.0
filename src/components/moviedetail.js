@@ -2,7 +2,6 @@ import React from 'react'
 import { original_img_url } from '../api/api';
 
 const Moviedetail = (props) => {
-
     const movieinfo = props.movie;
 	console.log(props.movie);
 	const title = movieinfo.title;

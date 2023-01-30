@@ -243,13 +243,6 @@
     color: white;
     padding: 5vw 2vw 0;
 }
-.heading{
-    color: white;
-    text-align: left;
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 20px;
-}
 .recommendations-container{
     width: 100%;
     display: flex;

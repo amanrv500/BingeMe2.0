@@ -19,7 +19,7 @@ const Trailer = (props) => {
 
   return (
     <div className="trailer-container h-100 backg">
-        <h1 className="heading ms-3">
+        <h1 className="text-white fs-2 fw-bolder mt-5 ms-3 mb-4">
             Video Clips
         </h1>
         <div className="d-flex flex-wrap justify-content-start align-item-start flex-row">

@@ -6,7 +6,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Moviedetail from '../components/moviedetail';
 import Trailer from '../components/trailer';
-import { Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import Recommendation from '../components/recommendation';
 import Footer from '../components/footer';
 
@@ -23,19 +23,21 @@ const Aboutpage = () => {
     },[movieId])
    
 
-  return (
-        <Container className='m-0 p-0 backg' fluid>
+    return (
+        <Container className='backg' fluid>
             <Row>
-                <Moviedetail movie={movieInfo}/>
+                <Col className='px-0'>
+                    <Moviedetail movie={movieInfo}/>
+                </Col>
             </Row>
             <Row>
-                <Trailer movie={movieInfo}/>
+                <Col>
+                    <Trailer movie={movieInfo}/>
+                </Col>
             </Row>
-            <Row>
-                <Recommendation movie={movieInfo}/>
-            </Row>
+            <Recommendation movie={movieInfo}/>
         </Container>
-  )
+    )
 }
 
 export default Aboutpage

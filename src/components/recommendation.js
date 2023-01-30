@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { Col } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import { movie_detail_http, api_key, img_url } from '../api/api'
 import { useNavigate } from 'react-router-dom'
 
@@ -21,30 +21,26 @@ const Recommendation = (props) => {
         })
     },[movieinfo])
 
-  return (
-        <div className="recommendations h-100 backg">
-            <h1 className="heading mt-5 ms-3">
-                {slogan}
-            </h1>
-            <div className="d-flex flex-wrap">
-            {recommendation.map((item, idx) => {
-                 if(recommendation[idx].backdrop_path == null){
-                    return null;
-                }
-                return (
-                    <div key={idx}>
-                        <div className="movie-rec" onClick={()=>Navigate(`/${item.id}`)} >
-                            <img src={`${img_url}/${item.backdrop_path}`} className="img-rec" alt=""/>
-                            <p className="movie-t">
-                                {item.title}
-                            </p>
-                        </div>
-                    </div>
-                 )
-                
-            })}
-            </div>
-        </div>
+    return (
+        <>
+            <Row>
+                <Col className="text-white fs-2 fw-bolder mt-5 ms-5 ">
+                    {slogan}
+                </Col>
+            </Row>
+            <Row className="backg ms-4">
+                {recommendation.map((item, idx) => {
+                    if(recommendation[idx].backdrop_path == null){
+                        return null;
+                    }
+                    return (
+                        <Col key={idx} className=" border border-white rounded search p-0 m-3" lg={4} onClick={()=>Navigate(`/${item.id}`)}>
+                            <img src={`https://image.tmdb.org/t/p/w780${item.poster_path}`} alt="poster" className='rounded'/>
+                        </Col>
+                    )
+                })}
+            </Row>
+        </>
     )
 
 }
