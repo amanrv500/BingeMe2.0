@@ -1,6 +1,57 @@
+/* background color  */
 .backg{
-    background: #091d3b;
+    background: #07172e;
 }
+
+/* carousel */
+.carousel-control-next{
+    margin-right: 0 !important;
+    width: 300px !important;
+  }
+  .carousel-control-next-icon{
+    width: 80px !important;
+  }
+  .carousel-control-prev{
+    margin-left: 0 !important;
+    width: 300px !important;
+  }
+  .carousel-control-prev-icon{
+    width: 80px !important;
+  }
+
+  .carousel {
+    position: relative !important;
+}
+  
+  .carousel::before,
+  .carousel::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 10% !important;
+    z-index: 1 !important;
+  }
+  
+  .carousel::before {
+    left: 0 !important;
+    background: linear-gradient(to right, rgb(0, 0, 0,0.5) , rgba(0,0,0,0.5) 100%) !important;
+  }
+  
+  .carousel::after {
+    right: 0 !important;
+    background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,0.5) 100%) !important; 
+  }
+ 
+
+.carousel-picture{
+    height: 32rem !important;
+    width: 80% !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 
 .title{
     font-size: 50px;
@@ -14,12 +65,7 @@
     font-weight: 500;
     text-align: left;
 }
-.genre{
-    color: white;
-    font-size: 20px;
-    text-align: left;
-    font-weight: 500;
-}
+
 /* .moviecard{
     width: 24%;
     height: 400px;
@@ -105,7 +151,6 @@
 }
 .movie-container{
     width: 100%;
-    height: 200px;
     display: flex;
     align-items: center;
     overflow-x: auto;
@@ -114,16 +159,19 @@
 }
 .movie{
     flex: 0 0 auto;
-    width: 22%;
-    height: 200px;
-    text-align: center;
-    margin-right: 10px;
+    height : 15rem;
+    /* text-align: center; */
     cursor: pointer;
     position: relative;
 }
+
+/* .movie:hover ~ .movie {
+    z-index: 1;
+    transform: translateX(25%);
+ } */
 .movie img{
     width: 100%;
-    height: 170px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -143,17 +191,6 @@
     opacity: 1;
 }
 
-.carousel{
-    width: 100% !important;
-    height: 40rem !important;
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 0));
-}
-
-.carousel-item{
-    height: 40rem !important;
-    background: rgb(24, 24, 24);
-    background: linear-gradient(90deg, rgba(24, 24, 24, 1), rgba(24, 24, 24, 0) 100%);
-}
 
 .movie-info{
     width: 100%;
@@ -246,4 +283,14 @@
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
+}
+
+.search{
+   width: 15rem;
+   height: 350px;
+}
+.search img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }

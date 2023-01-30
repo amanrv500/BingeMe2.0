@@ -29,7 +29,7 @@ const Recommendation = (props) => {
             <div className="d-flex flex-wrap">
             {recommendation.map((item, idx) => {
                  if(recommendation[idx].backdrop_path == null){
-                    idx++;
+                    return null;
                 }
                 return (
                     <div key={idx}>

@@ -15,12 +15,11 @@ const Aboutpage = () => {
     const param = useParams();
     const movieId = param.id;
     const [movieInfo, setMovieInfo] = useState([]);
-
-
     useEffect(() => {
         axios.get(`${movie_detail_http}/${movieId}?api_key=${api_key}`).then(res=>{
             setMovieInfo(res.data);
         })
+        window.scrollTo(0, 0);
     },[movieId])
    
 

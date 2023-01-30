@@ -3,6 +3,7 @@ import axios from 'axios'
 import { movie_genres_http, api_key, img_url } from '../api/api'
 import { GrNext, GrPrevious } from 'react-icons/gr'
 import { useNavigate } from 'react-router-dom'
+import { Col } from 'react-bootstrap'
 
 
 const Cards = (props) => {
@@ -35,9 +36,9 @@ const Cards = (props) => {
                     }
                 }
                 return (
-                    <div className='movie me-3' key={idx} onClick={()=>Navigate(`/${item.id}`)}>
-                        <img src={`${img_url}${item.backdrop_path}`}  alt={item.title} className='movie-img'/>
-                        <p className='movie-title'>{item.title}</p>
+                    <div className='movie me-3 border border-white rounded' key={idx} onClick={()=>Navigate(`/${item.id}`)}>
+                        <img src={`${img_url}${item.poster_path}`}  alt={item.title} className='movie-img rounded'/>
+                        {/* <p className='movie-title'>{item.title} gh</p> */}
                     </div>
                 )
             })}

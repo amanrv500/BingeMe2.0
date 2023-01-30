@@ -1,7 +1,7 @@
 //let api_key = "aefc133e5ee5751cb2e13af288b7b6e2";
 let api_key = "f0ac35b7b3bac44b4c7103bb2dd64991";
 
-let img_url = "https://image.tmdb.org/t/p/w500";
+let img_url = "https://image.tmdb.org/t/p/w342";
 
 let original_img_url = "https://image.tmdb.org/t/p/original";
 
