@@ -23,6 +23,9 @@ const Homepage = () => {
         <div className='backg'>
             <Carousel className='backg px-0 mx-0'>
                 {movies.map((item, idx) => {
+                    if(movies[idx].backdrop_path == null){
+                        return null;
+                    }
                     return (
                         <Carousel.Item key={idx} interval={4000} onClick={()=>Navigate(`/${item.id}`)} className=""> 
                             <img
