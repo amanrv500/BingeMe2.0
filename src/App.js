@@ -7,7 +7,6 @@ import Aboutpage from './pages/about';
 import NavigationBar from './components/navbar';
 import Footer from './components/footer';
 import Searchresults from './components/searchresults';
-import { useState } from 'react';
 
 function App() {
     return (

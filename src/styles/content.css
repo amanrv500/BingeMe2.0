@@ -1,6 +1,6 @@
 /* background color  */
 .backg{
-    background: #07172e;
+    background: rgb(7, 23, 46);
 }
 
 /* carousel */
@@ -81,34 +81,6 @@
     z-index: 1;
 } 
 
-.movie p{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(0, 0, 0, 0.5);
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-
-
-
-/* .movie p{
-    text-transform: capitalize;
-    height: 20px;
-    overflow: hidden;
-} */
-
-
 
 /* moviedeatail */
 
@@ -118,8 +90,7 @@
 }
 
 .movie-info img{
-    display: flex;
-    justify-content: end;
+    flex: end;
     align-items: end;
     margin-left: 30%;
     width: 70%;
@@ -140,12 +111,21 @@
     justify-content: flex-end;
     color: #fff;
 }
+.title{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.read-more{
+    font-size: 1em;
+    cursor: pointer;
+}
 
 /* recommendation */
 
 .search{
     width: 15rem;
-    height: 350px;
+    height: 23rem;
  }
  .search img{
      height: 100%;

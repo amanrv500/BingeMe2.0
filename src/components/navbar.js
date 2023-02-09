@@ -3,12 +3,9 @@ import React, { useState } from 'react';
 import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { logo } from '../assets';
 import {useNavigate} from 'react-router-dom';
-import { Row } from 'react-bootstrap';
 
 function NavigationBar(){
     const [searchTerm, setSearchTerm] = useState('');

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React from 'react'
-import { Col, Container, Row, Flex } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import { useEffect, useState } from 'react';
 import { SEARCHAPI } from '../api/api';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -29,7 +29,7 @@ const Searchresults = () => {
                 {Result.map((item, idx) => {
                     return (
                     <Col key={idx} className='border border-white rounded search p-0 m-3' lg={4} onClick={()=>Navigate(`/${item.id}`)}> 
-                        <Image src={`https://image.tmdb.org/t/p/w780${item.poster_path}`} alt="poster" className='rounded'/>
+                        <Image src={`https://image.tmdb.org/t/p/w342${item.poster_path}`} alt="poster" className='rounded'/>
                     </Col>
                 )})}
             </Row>

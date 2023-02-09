@@ -6,7 +6,7 @@ let api_key2 = "394c72e4";
 
 let omdb_movie_info="http://www.omdbapi.com/?";
 
-let img_url = "https://image.tmdb.org/t/p/w342";
+let img_url = "https://image.tmdb.org/t/p/w185";
 
 let original_img_url = "https://image.tmdb.org/t/p/original";
 

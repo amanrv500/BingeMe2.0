@@ -3,7 +3,6 @@ import axios from 'axios'
 import { movie_genres_http, api_key, img_url } from '../api/api'
 import { GrNext, GrPrevious } from 'react-icons/gr'
 import { useNavigate } from 'react-router-dom'
-import { Col } from 'react-bootstrap'
 import Image from 'react-bootstrap/Image'
 
 

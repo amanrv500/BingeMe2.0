@@ -1,28 +1,11 @@
 import React from 'react'
 import "../styles/content.css"
-import { api_key,
-        genres_list_http,
-        movie_genres_http,
-        img_url
- } from '../api/api';
-import { useState, useEffect, useRef } from 'react';
 import {GrPrevious,GrNext} from 'react-icons/gr'
-import axios from 'axios';
-import { Col, Row, Stack } from 'react-bootstrap';
 import Cards from './cards';
 import genres from '../data/genres';
 
 
 const Movies = () => {
-    // const [genres, setGenres] = useState([]);
-
-    // useEffect(() => {
-    //     axios.get(`${genres_list_http}api_key=${api_key}`)
-    //     .then(res=>{
-    //         console.log(res.data.genres);
-    //         setGenres(res.data.genres);
-    //     })
-    // }, []);
 
    return(
         <>

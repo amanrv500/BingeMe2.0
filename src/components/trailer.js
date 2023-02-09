@@ -31,7 +31,7 @@ const Trailer = (props) => {
                 if(idx < maxClips){
                     return (
                         <>
-                            <iframe key={idx} className='me-4 mb-4 yt-clips' src={`https://www.youtube.com/embed/${item.key}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen='true'  ></iframe>
+                            <iframe key={idx} className='me-4 mb-4 yt-clips' src={`https://www.youtube.com/embed/${item.key}`} title="myFrame" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen='true'  ></iframe>
                         </>
                     )
                 }

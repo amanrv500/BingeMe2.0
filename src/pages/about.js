@@ -1,5 +1,4 @@
 import React from 'react'
-import NavigationBar from '../components/navbar'
 import { useParams } from 'react-router-dom';
 import { movie_detail_http, api_key } from '../api/api';
 import axios from 'axios';
@@ -8,7 +7,6 @@ import Moviedetail from '../components/moviedetail';
 import Trailer from '../components/trailer';
 import { Col, Container, Row } from 'react-bootstrap';
 import Recommendation from '../components/recommendation';
-import Footer from '../components/footer';
 import Streaming from '../components/streaming';
 
 
