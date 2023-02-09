@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { movie_detail_http, api_key, img_url } from '../api/api'
 import { useNavigate } from 'react-router-dom'
+import Image from 'react-bootstrap/Image'
 
 const Recommendation = (props) => {
     let Navigate = useNavigate();
@@ -35,7 +36,7 @@ const Recommendation = (props) => {
                     }
                     return (
                         <Col key={idx} className=" border border-white rounded search p-0 m-3" lg={4} onClick={()=>Navigate(`/${item.id}`)}>
-                            <img src={`https://image.tmdb.org/t/p/w780${item.poster_path}`} alt="poster" className='rounded'/>
+                            <Image src={`https://image.tmdb.org/t/p/w780${item.poster_path}`} alt="poster" className='rounded'/>
                         </Col>
                     )
                 })}

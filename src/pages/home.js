@@ -34,8 +34,8 @@ const Homepage = () => {
                                 alt="First slide"
                             />
                             <Carousel.Caption>
-                                <h3>{item.title}</h3>
-                                <p>{item.overview}</p>
+                                <h3 className=''>{item.title}</h3>
+                                <p className=''>{item.overview}</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                     )

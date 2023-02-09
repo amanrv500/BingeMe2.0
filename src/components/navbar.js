@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
+import Image from 'react-bootstrap/Image'
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
@@ -13,16 +14,19 @@ function NavigationBar(){
     const [searchTerm, setSearchTerm] = useState('');
     let Navigate = useNavigate();
     return (
-        <Navbar bg="black" className='px-0' sticky='top'>
-            <Container className=''>
+        <Navbar collapseOnSelect bg="black"  expand="sm" variant='dark' className='px-0' sticky='top'>
+            <Container className='d-flex ' fluid>
                 <Navbar.Brand>
-                    <img src={logo} onClick={()=>Navigate(`/`)}width="290" height="50" className="mb-0 mt-0 " alt="logo"/>
+                    <Image src={logo} onClick={()=>Navigate(`/`)} fluid className="nav-img" alt="logo"/>
                 </Navbar.Brand>
-                <Form className="d-flex">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav" className=' justify-content-end'>
+                <Form className="d-flex me-2 " fluid >
                     <Form.Control
                         type="search"
                         placeholder="Search"
                         className="me-2"
+                        size='xs'
                         onChange={(e) =>{setSearchTerm(e.target.value)}}
                     />
                     <Button variant="dark" onClick={(e) =>{
@@ -32,6 +36,7 @@ function NavigationBar(){
                         Search
                     </Button>
                 </Form>
+                </Navbar.Collapse>
             </Container>
         </Navbar>
     );

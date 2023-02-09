@@ -30,11 +30,7 @@ const Aboutpage = () => {
                 </Col>
             </Row>
             <Streaming />
-            <Row>
-                <Col>
-                    <Trailer movie={movieInfo}/>
-                </Col>
-            </Row>
+            <Trailer movie={movieInfo}/>
             <Recommendation movie={movieInfo}/>
         </Container>
     )

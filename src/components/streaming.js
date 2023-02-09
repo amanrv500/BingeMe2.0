@@ -19,14 +19,14 @@ const Streaming = () => {
 
     return (
         <>
-        <Row className='ms-4 mt-3'>
-            <Col>
+        <Row >
+            <Col className='px-5'>
                 <p className='text-white fs-3 fw-bolder'>Play now</p>
             </Col>
         </Row>
-        <Row className='vh-100'>
-            <Col className='ms-5 p-0'style={{ height: '100%' }} >
-                <div style={{ width: '96%', height: '100%' }} >
+        <Row >
+            <Col className='d-flex justify-content-center px-5' >
+                <div className='streaming d-flex justify-content-center align-item-center' >
                     <iframe id="your-iframe" src={`https://autoembed.to/movie/tmdb/${movieId}`} width="100%" height="100%"
                     scrolling="no" sandbox frameborder="0" allowfullscreen="true" ></iframe>
                 </div>

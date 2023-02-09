@@ -1,5 +1,10 @@
-//let api_key = "aefc133e5ee5751cb2e13af288b7b6e2";
+//tmdb api key;
 let api_key = "f0ac35b7b3bac44b4c7103bb2dd64991";
+
+//omdb api key
+let api_key2 = "394c72e4";
+
+let omdb_movie_info="http://www.omdbapi.com/?";
 
 let img_url = "https://image.tmdb.org/t/p/w342";
 
@@ -26,5 +31,7 @@ export {
     movie_genres_http,
     APIURL,
     IMGPATH,
-    SEARCHAPI
+    SEARCHAPI,
+    omdb_movie_info,
+    api_key2
 }

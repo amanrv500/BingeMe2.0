@@ -4,6 +4,7 @@ import { movie_genres_http, api_key, img_url } from '../api/api'
 import { GrNext, GrPrevious } from 'react-icons/gr'
 import { useNavigate } from 'react-router-dom'
 import { Col } from 'react-bootstrap'
+import Image from 'react-bootstrap/Image'
 
 
 const Cards = (props) => {
@@ -25,7 +26,7 @@ const Cards = (props) => {
     }, [props.idx]);
 
     return (
-        <div className='movie-container' id='movie-container'>
+        <div className='movie-container w-100 d-flex' >
             <GrNext size={30} className="nxt-btn"/>
             <GrPrevious size={30} className="pre-btn"/>
             {movies.map((item, idx) => {
@@ -37,8 +38,8 @@ const Cards = (props) => {
                 }
                 return (
                     <div className='movie me-3 border border-white rounded' key={idx} onClick={()=>Navigate(`/${item.id}`)}>
-                        <img src={`${img_url}${item.poster_path}`}  alt={item.title} className='movie-img rounded'/>
-                        {/* <p className='movie-title'>{item.title} gh</p> */}
+                        <Image src={`${img_url}${item.poster_path}`} fluid alt={item.title} className='rounded'/>
+                        <p className='faded'>hivhvhvghvv</p>
                     </div>
                 )
             })}
